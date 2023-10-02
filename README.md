@@ -1,35 +1,46 @@
-# prsk_db
+# Front End
+3S企画のダッシュボード及びデータベースへ接続するクライアント。
 
-This template should help get you started developing with Vue 3 in Vite.
+# Environment
+- Dashboard
+  - Vue.js 3.3.4
+  - Vite 4.4.9
+  - Tailwind CSS
+  - Vuestic UI 3
+  
+- Website
+  - Vue.js 3.3.4
+  - Vite 4.4.9
+  - Tailwind CSS
+  - Daisy UI
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+# StartUp
+1. リポジトリをクローン
 ```sh
-npm install
+git clone https://github.com/2023-3Skoreisai/FrontEnd.git
 ```
 
-### Compile and Hot-Reload for Development
+2. クローンしたディレクトリに移動
+```sh
+cd FrontEnd
+```
 
+3. 依存関係をインストール
+```sh
+npm i
+```
+
+4. 開発サーバーを起動
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Viteの構成は次の通りです。
+- 開発サーバー
+`npm run dev`
+- ビルド
+`npm run build`
+- buildのプレビュー
+`npm run preview`
+- esLint
+`npm run lint`
