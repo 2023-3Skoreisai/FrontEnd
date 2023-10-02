@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("@fontsource-variable/noto-sans-jp");
+
+* {
+  font-family: 'Noto Sans JP Variable', sans-serif;
+}
+
+va-navbar-item {
+  font-family: 'Noto Sans JP Variable', sans-serif;
+}
