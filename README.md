@@ -36,11 +36,11 @@ npm run dev
 ```
 
 Viteの構成は次の通りです。
-- 開発サーバー
+- 開発サーバー  
 `npm run dev`
-- ビルド
+- ビルド  
 `npm run build`
-- buildのプレビュー
+- buildのプレビュー  
 `npm run preview`
-- esLint
+- esLint  
 `npm run lint`
