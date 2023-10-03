@@ -50,6 +50,10 @@ const breakpoint = useBreakpoint();
   $mobileBreakPointPX: 640px;
   $tabletBreakPointPX: 768px;
 
+  ::-webkit-scrollbar {
+        display: none;
+  }
+  
   .app-layout {
     height: 100vh;
     display: flex;
