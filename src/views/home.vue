@@ -13,13 +13,13 @@
       </va-card-content>
     </va-card>
     <va-card stripe stripe-color="success">
-      <va-card-title>提出成功数(Number of successful submissions)</va-card-title>
+      <va-card-title>提出成功数(successful submissions)</va-card-title>
       <va-card-content class="text-2xl text-center font-bold">
         0 人
       </va-card-content>
     </va-card>
     <va-card stripe stripe-color="danger">
-      <va-card-title>提出失敗数(Number of submission failures)</va-card-title>
+      <va-card-title>提出失敗数(submission failures)</va-card-title>
       <va-card-content class="text-2xl text-center font-bold">
         0 人
       </va-card-content>
@@ -71,7 +71,7 @@ export default {
     }, 1000);
     const ctx = this.$refs.chart.getContext('2d');
     ctx.canvas.height = 350;
-
+    Chart.defaults.color = "#0BB48E";
     new Chart(ctx, {
       type: 'bar',
       data: this.chartData,
@@ -81,7 +81,7 @@ export default {
             labels:{
               font:{
                 size: 13,
-                family: 'Sans-serif',
+                family: 'Noto Sans JP Variable',
                 style: 'normal',
               },
             },
