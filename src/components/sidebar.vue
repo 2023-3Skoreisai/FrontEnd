@@ -124,9 +124,9 @@ const version = packageJson.version;
             <li>Vue.js v3.3.4</li>
           <br>
             <b>Copylight</b>
-            <p>Web Application: Crysta World</p>
-            <p>Game System: K.Fukushima</p>
-            <p>All: 2023 Grade3 Electrics</p>
+            <p>このアプリケーションはMITライセンスとして提供されます。</p>
+            <p>ムービー: 3S</p>
+            <p>サーバー提供: 3E R.Saito</p>
         </div>
     </va-modal>
   </div>
