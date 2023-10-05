@@ -1,5 +1,5 @@
-# Front End
-3S企画のダッシュボード及びデータベースへ接続するクライアント。
+# 3S Dashboard
+データベースへのアクセス機能付きダッシュボードクライアント。
 
 # Environment
 - Dashboard
@@ -12,7 +12,7 @@
   - Vue.js 3.3.4
   - Vite 4.4.9
   - Tailwind CSS
-  - Daisy UI
+
 
 # StartUp
 1. リポジトリをクローン
