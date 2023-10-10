@@ -25,8 +25,8 @@
       </va-card-content>
     </va-card>
   </div>
-  <div class="flex justify-between">
-    <div class="w-1/2">
+  <div class="grid grid-cols-2 gap-4">
+    <div>
       <va-card stripe stripe-color="warning" class="mt-4">
         <va-card-title>提出状況(Submission status)</va-card-title>
         <va-card-content class="text-2xl text-center font-bold">
@@ -34,15 +34,96 @@
         </va-card-content>
       </va-card>
     </div>
+    <div>
+      <va-card stripe stripe-color="primary" class="mt-4">
+        <va-card-title>スコア詳細(Score Detail)</va-card-title>
+        <va-card-content class="text-xs font-bold">
+          <div class="mt-2">
+            最高得点:
+          </div>
+          <va-progress-bar
+            :model-value="100"
+            size="large"
+            content-inside
+          >
+            100
+          </va-progress-bar>
+          <div class="mt-4">
+            最低得点:
+          </div>
+          <va-progress-bar
+            :model-value="10"
+            size="large"
+            content-inside
+            color="danger"
+          >
+            10
+          </va-progress-bar>
+          <div class="mt-4">
+            平均値:
+          </div>
+          <va-progress-bar
+            :model-value="50"
+            size="large"
+            content-inside
+            color="warning"
+          >
+            50
+          </va-progress-bar>
+        </va-card-content>
+      </va-card>
+      <va-card stripe stripe-color="info" class="mt-4">
+        <va-card-title>サービス詳細(Service Detail)</va-card-title>
+        <va-card-content class="text-xs font-bold">
+          <va-data-table
+          :items="items"
+          :columns="columns"
+          striped="true"
+          animated="true"
+          allow-footer-sorting="true"
+          >
+            <template #cell(info)>
+              <div class="flex">
+                <Icon icon="svg-spinners:pulse-multiple" color="#28954d" width="24" height="24"/>
+                <p class="mt-0.5"> Online</p>
+              </div>     
+            </template>
+          </va-data-table>
+        </va-card-content>
+      </va-card>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
+<script  setup>
+import { Icon } from '@iconify/vue';
+</script>
+
+<script>
 import Chart from 'chart.js/auto';
- 
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   data() {
+    const items = [
+      {
+        name: 'Web Server',
+        info: 'ok',
+      },
+      {
+        name: 'API Server',
+        info: 'ok',
+      }
+    ];
+    const columns = [
+      { key: "name", sortable: true, label: "サービス名" },
+      { key: "info", sortable: true, label: "ステータス", formatter: (value) => {
+        return value === 'ok' ? '<Icon icon="bi:check-circle-fill" color="#10b981" height="24" width="24"/>' : '<Icon icon="bi:x-circle-fill" color="#ef4444" height="24" width="24"/>';
+      }},
+    ];
     return {
+      items,
+      columns,
       currentTime: new Date().toLocaleTimeString(),
       chartData: {
         labels: ['10/20', '10/21', '10/22'],
@@ -92,5 +173,5 @@ export default {
       },
     });
   },
-};
+});
 </script>

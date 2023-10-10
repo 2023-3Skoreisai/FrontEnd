@@ -38,8 +38,15 @@ const iconValue = computed(() => switchValue.value ? 'light_mode' : 'dark_mode')
         </template>
       </va-switch>
       <va-button class="mt-0.5">
-          <Icon icon="line-md:github" width="24" height="24"/>
+        <va-popover message="再読み込み">
+          <Icon icon="tabler:reload" width="24" height="24"/>
+        </va-popover>      
       </va-button>
+      <va-button class="mt-0.5">
+        <va-popover message="Github">
+          <Icon icon="line-md:github" width="24" height="24"/>
+        </va-popover>     
+      </va-button>      
     </template>
   </va-navbar>
 </template>

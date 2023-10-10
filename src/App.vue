@@ -45,6 +45,54 @@ const breakpoint = useBreakpoint();
   </div>
 </template>
 
+<script>
+/*
+import { useModal } from 'vuestic-ui'
+import axios from 'axios';
+import config from "../config.json";
+import router from '@/router/index.js';
+*/
+export default {
+  mounted() {
+    /*
+    const { confirm } = useModal();
+    const api_endpoint = config.API_Endpoint;
+    axios.get(api_endpoint)
+      .then(async (res) => {
+        if (res.status !== 200) {
+          // HTTPステータスコードが200以外の場合、カスタムモーダルを表示
+          const result = await confirm({
+            message: 'APIサーバーに接続できませんでした。詳しくはデベロッパーツールのコンソールをご確認ください。',
+            title: 'エラーが発生しました',
+            okText: "OK",
+            cancelText: "キャンセル",
+            noDismiss: true,
+            blur: true,
+          });
+          if (result) {
+            router.push({ name: 'error' });
+          }
+        }
+      })
+      .catch(async (error) => {
+        console.log(error);
+        const result = await confirm({
+            message: `APIサーバーに接続できませんでした。詳しくはデベロッパーツールのコンソールをご確認ください。`,
+            title: '次のエラーが発生しました',
+            okText: "OK",
+            cancelText: "キャンセル",
+            noDismiss: true,
+            blur: true,
+            messageHtml: true,
+          });
+        if (result) {
+          router.push({ name: 'error' });
+        }
+      });
+      */
+  }
+}
+</script>
 
 <style lang="scss">
   $mobileBreakPointPX: 640px;

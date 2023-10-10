@@ -6,6 +6,7 @@ import Data from "../views/data.vue"
 import Support from "../views/support.vue"
 import Score_detail from "../views/page/score_detail.vue"
 import Result_detail from "../views/page/result_detail.vue"
+import Error from "../views/error.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/page/result',
       name: 'result_detail',
       component: Result_detail
+    },
+    {
+      path: '/error',
+      name: 'error',
+      component: Error
     },
 
   ]
