@@ -37,7 +37,7 @@ const iconValue = computed(() => switchValue.value ? 'light_mode' : 'dark_mode')
           />
         </template>
       </va-switch>
-      <va-button class="mt-0.5">
+      <va-button class="mt-0.5" @click="reloadPage">
         <va-popover message="再読み込み">
           <Icon icon="tabler:reload" width="24" height="24"/>
         </va-popover>      
@@ -64,6 +64,11 @@ export default {
     return {
       value: true,
     };
+  },
+  methods: {
+    reloadPage() {
+      this.$router.go(0);
+    },
   },
 };
 </script>

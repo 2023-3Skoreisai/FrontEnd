@@ -142,3 +142,12 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from "axios";
+import { defineComponent, onMounted } from "vue";
+
+export default defineComponent({
+  
+});
+</script>
